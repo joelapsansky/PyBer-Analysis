@@ -14,7 +14,8 @@ Right away, it's clear that the number of drivers is really high in urban cities
 * Urban cities see the highest fares at just under $40K
 * Rural cities see the lowest fares at just over $4K
 * Urban cities see the highest rides at 1,625
-* Rural cities see the lowest rides at 125    
+* Rural cities see the lowest rides at 125  
+  
 I used the 'groupby' function in association with aggregate functions like 'sum()' and 'count()' in order to calculate these numbers.  As an example, here is the total fares solution:  
 ```  
 total_fares = pyber_data_df.groupby(["type"]).sum()["fare"]
@@ -36,13 +37,13 @@ It is clear that PyBer charges higher fares in areas where they have less availa
 
 ## Summary 
 Because driver counts vary so much between cities, PyBer has decisions to make about where to place them, when to place them there, and how much to charge for rides.  I would recommend implementing the following:
-* Decrease distance that drivers travel between rides
-  -If drivers travel shorter distances initially and between rides, it will cut down on costs and keep customers happy with lower wait times  
-  -This may mean employing more drivers who have rural homes, or keeping existing drivers near customers in rural areas while there is demand (route optimization)  
-  -As a bonus, allow non-urban riders to schedule rides ahead of time so that PyBer can better plan routes  
-* When urban drivers leave the urban areas for rides, have them fulfill the demand outside of the urban areas before heading back into them  
-  -This will help fulfill demand, lower wait times, and decongest the cities that have an abundance of drivers  
-  -Incentivize drivers to stay in areas with demand instead of traveling elsewhere  
-* Consider changing the way fares are charged in order to push the averages between city types closer together
-  -Look at charging per unit of distance, per trip, or even subscription-based plans  
+* Decrease distance that drivers travel between rides  
+  -If drivers travel shorter distances initially and between rides, it will cut down on costs and keep customers happy with lower wait times    
+  -This may mean employing more drivers who have rural homes, or keeping existing drivers near customers in rural areas while there is demand (route optimization)    
+  -As a bonus, allow non-urban riders to schedule rides ahead of time so that PyBer can better plan routes    
+* When urban drivers leave the urban areas for rides, have them fulfill the demand outside of the urban areas before heading back into them    
+  -This will help fulfill demand, lower wait times, and decongest the cities that have an abundance of drivers    
+  -Incentivize drivers to stay in areas with demand instead of traveling elsewhere    
+* Consider changing the way fares are charged in order to push the averages between city types closer together  
+  -Look at charging per unit of distance, per trip, or even subscription-based plans    
   -Implement minimum fares in cities to avoid cost burdens from short trips, and give suburban and urban riders a discount if they are traveling close to customers in demand  
