@@ -46,4 +46,4 @@ Because driver counts vary so much between cities, PyBer has decisions to make a
   -Incentivize drivers to stay in areas with demand instead of traveling elsewhere    
 * Consider changing the way fares are charged in order to push the averages between city types closer together  
   -Look at charging per unit of distance, per trip, or even subscription-based plans    
-  -Implement minimum fares in cities to avoid cost burdens from short trips, and give suburban and urban riders a discount if they are traveling close to customers in demand  
+  -Implement minimum fares in cities to avoid cost burdens from short trips, and give suburban and rural riders a discount if they are traveling close to customers in demand  
